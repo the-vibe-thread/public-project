@@ -1,0 +1,119 @@
+.footer-section {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #000;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-section h5 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-section ul {
+  padding-left: 0;
+}
+
+.footer-section li,
+.footer-section a {
+  list-style: none;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-section .footer-row {
+  /* Reduce vertical spacing between Helpful Links, Contact, Feedback */
+  margin-bottom: 0.5rem;
+}
+
+.footer-section .footer-col {
+  /* Remove extra padding, add horizontal padding for tightness */
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 2.5rem;
+  padding-right: 1.5rem;
+  /* Add subtle border between columns for separation */
+  border-right: 1px solid rgba(255,255,255,0.07);
+}
+
+.footer-section .footer-col:last-child {
+  border-right: none;
+}
+
+/* Remove blue focus shadow and border for form controls */
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: #ccc !important;
+  outline: none !important;
+}
+
+.form-input {
+  background-color: #000000 !important;
+  color: white !important;
+  border-radius: 0.5rem !important;
+  border: 1px solid #444 !important;
+}
+.form-input::placeholder {
+  color: #cccccc !important;
+}
+
+/* Feedback form box styling for dark background */
+.footer-section .feedback-form-container {
+  background: #101010;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Add to Footer.css */
+.newsletter-subscribe-box {
+  background: rgb(0, 0, 0);
+  border-radius: 1.8rem;
+}
+
+.newsletter-input {
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  padding: 0.7rem 1.2rem;
+  border: 2px solid #222;
+  background: #181818;
+}
+
+.newsletter-input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.newsletter-btn {
+  border-radius: 2rem !important;
+  background: #222 !important;
+  color: #ffffff !important;
+  font-weight: 400;
+  font-size: 1.15rem;
+  transition: background 0.2s;
+}
+
+.newsletter-btn:hover {
+  scale: 1.05;
+  background: #444 !important;
+}
+
+/* Responsive tweaks for columns */
+@media (max-width: 992px) {
+  .footer-section .footer-col {
+    border-right: none;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}

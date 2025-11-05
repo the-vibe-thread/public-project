@@ -1,0 +1,432 @@
+/* Ensure navbar is sticky */
+.tvt-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+
+/* navbar.css */
+.navbar-icon-btn {
+  transition: transform 0.2s, background 0.2s;
+  border-radius: 50%;
+}
+
+.navbar-icon-btn:hover,
+.navbar-icon-btn:focus {
+  transform: scale(1.1);
+  background-color: #ffffff;
+}
+.suggestion-dropdown {
+  animation: fadeInDown 0.2s;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.suggestion-item:hover,
+.suggestion-item:focus {
+  background: #f0f0f0;
+  cursor: pointer;
+}
+/* Make navbar elements larger and easier to tap on mobile */
+@media (max-width: 600px) {
+  .navbar {
+    border-radius: 0 !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+  .navbar-icon-btn-modern,
+  .navbar-cart-pill {
+    padding: 0.8rem !important;
+    font-size: 1.1rem !important;
+    min-width: 40px;
+    min-height: 40px;
+  }
+  .navbar-cart-pill {
+    padding: 0.7rem 1.2rem !important;
+    font-size: 1.1rem !important;
+  }
+  .navbar-brand img,
+  .img-fluid {
+    max-height: 32px !important;
+  }
+  .offcanvas,
+  .motion-div-offcanvas {
+    width: 90vw !important;
+    min-width: 220px !important;
+    max-width: 400px !important;
+  }
+  .offcanvas-close-btn {
+    top: 10px !important;
+    right: 10px !important;
+  }
+  .suggestion-dropdown {
+    font-size: 1rem !important;
+  }
+  .list-group-flush .accordion-link a,
+  .submenu-item a {
+    padding: 0.8rem 1rem !important;
+    font-size: 1rem !important;
+  }
+  .d-flex.gap-3 {
+    gap: 1rem !important;
+  }
+}
+
+/* Hide text labels on icons if you want more space (optional) */
+@media (max-width: 400px) {
+  .navbar .nav-link span {
+    display: none;
+  }
+}
+
+/* --- Modern Icon Button Styles --- */
+.navbar-icon-btn-modern {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.7rem;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.navbar-icon-btn-modern:hover,
+.navbar-icon-btn-modern:focus {
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  outline: none;
+}
+
+/* Cart pill style */
+.navbar-cart-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.4rem 1.1rem;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #222;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.navbar-cart-pill:hover,
+.navbar-cart-pill:focus {
+  background: #f5f5f5;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  outline: none;
+}
+
+/* --- Offcanvas Responsive Width (for mobile) --- */
+@media (max-width: 600px) {
+  .offcanvas,
+  .motion-div-offcanvas {
+    width: 90vw !important;
+    min-width: 220px !important;
+    max-width: 400px !important;
+  }
+}
+
+/* Responsive icon and button sizing for mobile */
+@media (max-width: 600px) {
+  .navbar-icon-btn-modern,
+  .navbar-cart-pill {
+    padding: 0.8rem !important;
+    font-size: 1.1rem !important;
+    min-width: 40px;
+    min-height: 40px;
+  }
+  .navbar-cart-pill {
+    padding: 0.7rem 1.2rem !important;
+    font-size: 1.1rem !important;
+  }
+  .navbar-brand img,
+  .img-fluid {
+    max-height: 32px !important;
+  }
+}
+
+/* Extra small screens: shrink icons further */
+@media (max-width: 400px) {
+  .navbar-icon-btn-modern,
+  .navbar-cart-pill {
+    padding: 0.6rem !important;
+    font-size: 1rem !important;
+    min-width: 36px;
+    min-height: 36px;
+  }
+  .navbar-icon-btn-modern .svg-inline--fa,
+  .navbar-cart-pill .svg-inline--fa {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Logo styling */
+.tvt-logo {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  color: #111 !important;
+  text-transform: uppercase;
+  font-weight: 100;
+  background: none !important;
+  border: none !important;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  user-select: none;
+}
+
+/* Icon button styling */
+.tvt-icon-btn {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0.5rem !important;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none !important;
+  transition: none !important;
+  cursor: pointer;
+}
+
+.tvt-icon-btn:hover,
+.tvt-cart-btn:hover,
+.tvt-icon-btn:active,
+.tvt-cart-btn:active {
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Cart badge styling */
+.tvt-cart-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  background: #222;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Navbar layout */
+.tvt-navbar-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  min-height: 80px;
+  width: 100%;
+}
+
+.tvt-navbar-left,
+.tvt-navbar-center,
+.tvt-navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.tvt-navbar-center {
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.tvt-navbar-left,
+.tvt-navbar-icons {
+  flex: 0 0 auto;
+}
+
+/* Navbar icons group */
+.tvt-navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* --- Responsive for mobile --- */
+@media (max-width: 900px) {
+  .tvt-navbar-inner {
+    display: none !important;
+  }
+  .tvt-navbar-mobile {
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-bottom: none !important;
+  }
+  .tvt-navbar-mobile-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+  }
+  .tvt-icon-btn {
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0.25rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tvt-navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem !important;
+    flex: 0 0 auto;
+    margin-right: 0.5rem; /* Move right icons a bit to the right */
+  }
+  .tvt-navbar-mobile-row > .tvt-icon-btn:first-child {
+    margin-left: -1.2rem; /* Move menu button a bit to the left */
+  }
+  .tvt-logo-mobile {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.1rem !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    line-height: 1.1 !important;
+    text-align: center;
+    flex: 1 1 auto;
+    display: block !important;
+  }
+}
+
+/* Hide left logo on desktop, show center logo on desktop */
+@media (min-width: 901px) {
+  .tvt-navbar-mobile {
+    display: none !important;
+  }
+  .tvt-logo-mobile {
+    display: none !important;
+  }
+  .tvt-navbar-center {
+    display: flex !important;
+  }
+}
+
+/* Remove these if not needed anymore */
+.tvt-menu-desktop,
+.tvt-menu-mobile {
+  display: none !important;
+}
+
+/* For mobile view */
+.tvt-navbar-inner {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  min-height: 56px;
+}
+
+.tvt-navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.tvt-navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.tvt-cart-count,
+.tvt-icon-btn[aria-label="Cart"] {
+  color: #111;
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 0 0.5rem;
+  transition: color 0.2s;
+}
+
+/* Ensure the container is flex and items are centered */
+.tvt-navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Align Cart text vertically and remove extra padding */
+.tvt-cart-count {
+  display: flex;
+  align-items: center;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1;
+  font-size: 1.2rem;
+  font-weight: 400;
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #111;
+}
+
+@media (min-width: 901px) {
+  .tvt-navbar-inner {
+    padding: 0 2rem;
+    min-height: 80px;
+  }
+  .tvt-navbar-center {
+    justify-content: center;
+  }
+  .tvt-navbar-left,
+  .tvt-navbar-icons {
+    min-width: 0;
+  }
+}
+
+/* Ensure parent containers allow sticky behavior */
+body,
+html,
+.container,
+.row,
+.col,
+.product-list-section,
+.product-grid-container {
+  overflow: visible !important;
+  position: relative !important;
+}
+
+/* Mobile navbar sticky styles */
+.tvt-navbar-mobile {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  background: #fff;
+}
+
+/* Hide caret for Bootstrap dropdown toggle with class no-caret */
+.no-caret::after {
+  display: none !important;
+}

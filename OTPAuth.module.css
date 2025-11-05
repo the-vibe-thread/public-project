@@ -1,0 +1,82 @@
+  
+  /* OTPAuth Container */
+  .otp-auth-container {
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: hidden !important;
+  }
+  
+  /* Form Card Styles */
+  .otp-form-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(134, 124, 124, 0.1);
+    width: 100%;
+
+  }
+  
+  .otp-form-card h2 {
+    font-weight: 600;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Input Fields */
+  .otp-input {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    min-width: 400px; /* Increased max width for desktop */
+    margin-top: 10px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    display: block;
+  }
+  
+  .otp-input:focus {
+    border-color: #909191;
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0.5);
+  }
+  
+  /* Responsive: On small screens, input takes full width */
+  @media (max-width: 500px) {
+    .otp-input {
+      max-width: 100%;
+      width: 100%;
+      min-width: 0;
+    }
+  }
+  
+  /* Button Styles */
+  .otp-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #686868;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .otp-button:disabled {
+    background-color: #c1c1c1;
+  }
+  
+  .otp-button:hover:not(:disabled) {
+    background-color: #000000;
+    transform: scale(1.05);
+  }
+  
+  /* Form Labels */
+  .otp-label {
+    font-size: 14px;
+    color: #555;
+  }

@@ -1,0 +1,427 @@
+/* General resets and layout */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body,
+.product-listing-root,
+.container,
+.tvt-navbar,
+.tvt-navbar-inner {
+  background: #fff !important;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.05rem;
+}
+
+h3,
+.text-center.mt-5.mb-3,
+.gucci-heading {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #181818;
+  text-transform: uppercase;
+}
+
+/* Product Card */
+.product-card {
+  background: #fff;
+  border-radius: 5px;
+  overflow: visible;
+}
+
+.product-card .product-img,
+.product-card .carousel-product-img,
+.product-card .product-img-large,
+.carousel-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.product-card .card-body-custom {
+  padding: 1.2rem;
+}
+
+.product-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #181818;
+  margin-bottom: 0.5rem;
+}
+
+.product-card .card-text {
+  font-size: 1rem;
+  color: #444;
+}
+
+.product-card .fw-bold {
+  font-weight: 700;
+}
+
+.product-card .text-muted {
+  color: #888;
+}
+
+/* Swiper Pagination Bullets */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e04a7e;
+  opacity: 0.4;
+  margin: 0 4px;
+  display: inline-block;
+  transition: background 0.2s, opacity 0.2s;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #e04a7e;
+}
+
+/* Carousel Image */
+.carousel-image {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  border-radius: 0px;
+  background: #f8f8f8;
+  box-shadow: none;
+  transition: filter 0.2s, transform 0.2s;
+  border: none !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .carousel-image {
+    height: 300px;
+  }
+  .product-card .card-body-custom {
+    padding: 0.7rem;
+  }
+  h3,
+  .text-center.mt-5.mb-3,
+  .gucci-heading {
+    font-size: 1.1rem;
+  }
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--gucci-gold);
+  color: var(--gucci-black);
+  border: none;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  padding: 0.7em 2em;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.1);
+  transition: background 0.2s, color 0.2s;
+}
+.btn-primary:hover {
+  background: var(--gucci-red);
+  color: #fff;
+}
+
+/* Card Body Custom */
+.card-body-custom {
+  background: var(--gucci-white);
+  padding: 0.75rem 0.5rem !important;
+  min-height: unset;
+  padding: 0.5rem 0.5rem 0.7rem 0.5rem;
+}
+
+.card-body-custom .card-title {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-body-custom .card-text,
+.card-body-custom .fw-bold,
+.card-body-custom .text-muted {
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+.card-body-custom .badge {
+  font-size: 0.75rem;
+  padding: 0.3em 0.6em;
+}
+
+/* Badge for color swatches */
+.badge {
+  border: 1px solid var(--gucci-gold) !important;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  padding: 2px 7px !important;
+  font-size: 0.8rem;
+}
+
+/* Filter Container */
+.filter-container {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+/* Product image for all cards */
+.product-img,
+.product-img-large {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* New carousel image class */
+.carousel-product-img {
+  height: 400px !important;
+  max-height: 400px !important;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 24px rgba(21, 71, 52, 0.1);
+}
+
+/* Default desktop heights */
+.product-img {
+  height: 260px;
+}
+.product-img-large {
+  height: 440px !important;
+  max-height: 440px;
+}
+
+/* Responsive: smaller height on mobile */
+@media (max-width: 768px) {
+  .product-img,
+  .product-img-large {
+    height: 180px !important;
+    max-height: 180px;
+  }
+  .carousel-product-img {
+    height: 300px !important;
+    max-height: 300px !important;
+  }
+}
+
+/* Gallery Section (legacy, not used for modern layout) */
+.photo-gallery-section {
+  margin-top: 5%;
+  width: 100%;
+  background: #000;
+  padding: 0;
+}
+
+.gallery-row {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-card {
+  flex: 1 1 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(40, 60, 90, 0.07);
+}
+
+.gallery-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+@media (max-width: 991.98px) {
+  .gallery-card {
+    height: 180px;
+  }
+}
+@media (max-width: 575.98px) {
+  .gallery-row {
+    flex-direction: column;
+  }
+  .gallery-card {
+    height: 160px;
+  }
+}
+
+/* Load More Button */
+.loadMoreBtn {
+  background: var(--gucci-gold);
+  color: var(--gucci-black);
+  border: none;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  padding: 0.7em 2em;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.1);
+  transition: background 0.2s, color 0.2s;
+}
+.loadMoreBtn:hover {
+  background: var(--gucci-red);
+  color: #fff;
+}
+
+/* Carousel Media Video */
+.carousel-media-video,
+.carousel-image {
+  width: 100% !important;
+  aspect-ratio: 32/9 !important;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 768px) {
+  .carousel-media-video,
+  .carousel-image {
+    aspect-ratio: 32/12 !important;
+  }
+}
+
+.main-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Modern Gallery Section */
+.photoGalleryModern {
+  margin: 60px 0 0 0;
+  max-width: 1600px;
+  padding: 0 2vw;
+  background: #fff;
+}
+
+/* Section title line above the gallery row */
+.galleryTitleLine {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto 24px auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+.galleryTitleLineText {
+  font-weight: normal;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  color: #181818;
+  text-transform: uppercase;
+  margin-right: 24px;
+}
+.galleryTitleLineBar {
+  flex: 1 1 auto;
+  border-bottom: 2px solid #eaeaea;
+  height: 0;
+  min-width: 40px;
+}
+
+.galleryRowModern {
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.galleryCardModern {
+  position: relative;
+  width: 390px;
+  aspect-ratio: 1/1;
+  background: #fff;
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  min-width: 0;
+  box-sizing: border-box;
+}
+.galleryVideoModern {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.pauseBtn {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  outline: none;
+}
+.pauseBtn:hover,
+.pauseBtn:focus {
+  background: rgba(0, 0, 0, 0.04);
+}
+.pauseBtn svg {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .galleryCardModern {
+    width: 30vw;
+    min-width: 210px;
+    max-width: 360px;
+  }
+  .galleryRowModern {
+    gap: 2vw;
+  }
+}
+@media (max-width: 900px) {
+  .galleryCardModern {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    aspect-ratio: 1/1;
+  }
+  .galleryRowModern {
+    gap: 0;
+  }
+  .pauseBtn
+  {
+    right: 34px;
+  }
+}
+
+/* On mobile, let Swiper handle layout; don't force a column direction */

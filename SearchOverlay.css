@@ -1,0 +1,261 @@
+.homepage-search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0.5rem 0;
+}
+
+/* Animated underline */
+.homepage-search-bar .form-control {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  background: transparent;
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding: 0.7rem 0.5rem 0.7rem 0;
+  box-shadow: none;
+  outline: none;
+  flex: 1 1 auto;
+  min-width: 0;
+  transition: border-color 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+/* Underline animation using pseudo-element */
+.homepage-search-bar .form-control:focus {
+  border-bottom: 1px solid black;
+}
+
+.homepage-search-bar .form-control::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #222;
+  transition: left 0.3s cubic-bezier(.4,0,.2,1), width 0.3s cubic-bezier(.4,0,.2,1);
+  z-index: 2;
+}
+
+.homepage-search-bar .form-control:focus::after {
+  left: 0;
+  width: 100%;
+}
+
+/* Placeholder transition (float up and shrink) */
+.homepage-search-bar {
+  position: relative;
+}
+
+.homepage-search-bar .form-control::placeholder {
+  color: #888;
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: transform 0.2s, font-size 0.2s, color 0.2s;
+  transform-origin: left;
+}
+
+.homepage-search-bar .form-control:focus::placeholder,
+.homepage-search-bar .form-control:not(:placeholder-shown)::placeholder {
+  transform: translateY(-1.2em) scale(0.85);
+  color: #222;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.homepage-search-bar .btn {
+  border: none;
+  background: transparent;
+  color: #888;
+  border-radius: 50%;
+  padding: 0.3rem 0.7rem;
+  font-size: 1.3rem;
+  margin-left: 0.3rem;
+  transition: color 0.2s, background 0.2s;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage-search-bar .btn:focus,
+.homepage-search-bar .btn:hover {
+  color: #222;
+  background: #f0f0f0;
+}
+
+.search-overlay {
+  padding: 1rem;
+}
+@media (max-width: 600px) {
+  .search-overlay {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .homepage-search-bar {
+    max-width: 100%;
+    padding: 0.2rem 0;
+  }
+  .homepage-search-bar .form-control {
+    font-size: 1rem;
+    padding: 0.5rem 0.3rem 0.5rem 0;
+  }
+  .homepage-search-bar .btn {
+    font-size: 1.1rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage-search-bar {
+    max-width: 100vw;
+    padding: 0.1rem 0;
+  }
+  .input-underline-wrap .form-control {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.2rem 0.4rem 0;
+  }
+  .homepage-search-bar .btn,
+  .clear-x-btn {
+    font-size: 1rem;
+    padding: 0.2rem 0.4rem;
+    min-width: 36px;
+    min-height: 36px;
+  }
+  .clear-x-btn {
+    right: 0.5rem !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .input-underline-wrap {
+    min-width: 0;
+  }
+}
+
+/* Make sure the clear-x-btn is always touch-friendly */
+.clear-x-btn {
+  min-width: 40px;
+  min-height: 40px;
+  width: 40px;
+  height: 40px;
+  right: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #336699;
+  border: none;
+  z-index: 2;
+  transition: background 0.2s, color 0.2s;
+}
+
+.clear-x-btn:focus,
+.clear-x-btn:hover {
+  background: #336699;
+  color: #fff;
+}
+
+/* Make suggestion dropdown fit small screens */
+.suggestion-dropdown {
+  max-height: 40vh;
+  overflow-y: auto;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .suggestion-dropdown {
+    font-size: 0.95rem;
+    max-height: 30vh;
+  }
+}
+
+.input-underline-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input-underline-wrap .form-control {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  background: transparent;
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding: 0.7rem 0.5rem 0.7rem 0;
+  box-shadow: none;
+  outline: none;
+  width: 100%;
+  z-index: 1;
+}
+
+.input-underline-wrap .underline {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #222;
+  transition: left 0.5s cubic-bezier(.4,0,.2,1), width 0.5s cubic-bezier(.4,0,.2,1);
+  z-index: 2;
+}
+
+.input-underline-wrap .underline.active {
+  left: 0;
+  width: 100%;
+}
+
+/* Placeholder animation (optional, keep your existing styles) */
+.input-underline-wrap .form-control::placeholder {
+  color: #888;
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: transform 0.2s, font-size 0.2s, color 0.2s;
+  transform-origin: left;
+}
+
+.input-underline-wrap .form-control.focused::placeholder,
+.input-underline-wrap .form-control:not(:placeholder-shown)::placeholder {
+  transform: translateY(-1.2em) scale(0.85);
+  color: #222;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Hide default clear (X) button in search inputs */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+input[type="search"]::-ms-clear {
+  display: none;
+}
+.suggestion-dropdown {
+  animation: fadeInDown 0.2s;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.suggestion-item:hover, .suggestion-item:focus {
+  background: #f0f0f0;
+  cursor: pointer;
+}

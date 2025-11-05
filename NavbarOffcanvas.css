@@ -1,0 +1,274 @@
+/* Uniform height for menu options and accordion headers */
+.accordion-button {
+  min-height: 48px;
+  border-bottom: 1px solid #ddd;
+}
+.accordion-header:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header .header {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+/* Offcanvas and Accordion: all related classes moved here! */
+
+.offcanvas .btn-close {
+  border-radius: 2px;
+  opacity: 1;
+  padding: 0.5rem;
+  top: 1rem;
+  right: 1rem;
+  color: #b5b5b5;
+}
+
+.offcanvas .btn-close:hover {
+  background-color: transparent;
+}
+
+.offcanvas .btn-close:focus {
+  box-shadow: none;
+}
+
+.offcanvas-close-btn {
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  background: rgba(240, 240, 240, 0.85);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.offcanvas-close-btn:hover,
+.offcanvas-close-btn:focus {
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  transform: scale(1.15) rotate(90deg);
+  outline: none;
+}
+
+.offcanvas-close-btn .svg-inline--fa {
+  transition: color 0.2s;
+}
+
+.offcanvas-close-btn:hover .svg-inline--fa,
+.offcanvas-close-btn:focus .svg-inline--fa {
+  color: #d32f2f;
+}
+
+.accordion-button {
+  background-color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  box-shadow: none !important;
+  height: 12px;
+}
+
+.accordion-button:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f8f8f8;
+  color: #000;
+}
+
+/* Submenu item styling */
+.submenu-item {
+  border-bottom: 1px solid #eee;
+}
+
+.submenu-item a {
+  display: block;
+  padding: 12px 16px;
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.submenu-item a:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Remove bottom border from last item */
+.accordion-body .submenu-item:last-child {
+  border-bottom: none;
+}
+.accordion-static-links {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-link {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-link:last-child {
+  border-bottom: none;
+}
+
+.accordion-link a {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  color: #212529;
+  background-color: #fff;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-link a:hover {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+/* Hide caret for Bootstrap dropdown toggle with class no-caret */
+.no-caret::after {
+  display: none !important;
+}
+
+/* --- Offcanvas Responsive Width (for mobile) --- */
+@media (max-width: 600px) {
+  .offcanvas,
+  .motion-div-offcanvas {
+    width: 90vw !important;
+    min-width: 220px !important;
+    max-width: 400px !important;
+  }
+  .offcanvas-close-btn {
+    top: 10px !important;
+    right: 10px !important;
+  }
+  .list-group-flush .accordion-link a,
+  .submenu-item a {
+    padding: 0.8rem 1rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+.offcanvas .btn-close {
+  border-radius: 2px; /* Optional: make it circular */
+  opacity: 1; /* Make it fully visible */
+  padding: 0.5rem; /* Adjust size */
+  top: 1rem; /* Position it manually if needed */
+  right: 1rem;
+  color: #b5b5b5; /* Color of the 'X' */
+}
+
+.offcanvas .btn-close:hover {
+  background-color: transparent;
+}
+
+.offcanvas .btn-close:focus {
+  box-shadow: none; /* Remove focus outline */
+}
+.offcanvas-close-btn {
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  background: rgba(240, 240, 240, 0.85);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.offcanvas-close-btn:hover,
+.offcanvas-close-btn:focus {
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  transform: scale(1.15) rotate(90deg);
+  outline: none;
+}
+
+.offcanvas-close-btn .svg-inline--fa {
+  transition: color 0.2s;
+}
+
+.offcanvas-close-btn:hover .svg-inline--fa,
+.offcanvas-close-btn:focus .svg-inline--fa {
+  color: #d32f2f;
+}
+/* Remove accordion borders and background styles */
+.accordion-button {
+  background-color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  box-shadow: none !important;
+  height: 12px;
+}
+
+.accordion-button:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f8f8f8;
+  color: #000;
+}
+
+/* Submenu item styling */
+.submenu-item {
+  border-bottom: 1px solid #eee;
+}
+
+.submenu-item a {
+  display: block;
+  padding: 12px 16px;
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.submenu-item a:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Optional: Remove bottom border from last item */
+.accordion-body .submenu-item:last-child {
+  border-bottom: none;
+}
+.accordion-static-links {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-link {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-link:last-child {
+  border-bottom: none;
+}
+
+.accordion-link a {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  color: #212529;
+  background-color: #fff;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-link a:hover {
+  background-color: #f8f9fa;
+  color: #000;
+}
